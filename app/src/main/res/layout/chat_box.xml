@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chat_list">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:gravity="center_vertical">
+
+        <com.example.whats_app.Views.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView"
+            android:layout_weight="0"
+            android:background="@drawable/default_img"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameTextView"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:lines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/msgTextView"
+                android:textColor="@color/light"
+                android:textSize="15sp"
+                android:lines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/rightBar"
+            android:orientation="vertical"
+            android:layout_weight="0"
+            android:gravity="end">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateTextView"
+                android:textColor="@color/light"
+                android:textSize="13sp"
+                android:lines="1"
+                android:layout_marginBottom="5dp"/>
+
+            <com.example.whats_app.Views.CircleView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:id="@+id/numView"
+                android:background="@color/green"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numTextView"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"/>
+
+            </com.example.whats_app.Views.CircleView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

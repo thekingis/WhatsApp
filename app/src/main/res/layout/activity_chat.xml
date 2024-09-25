@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="@drawable/bg_img">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/chatHead"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/dark">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/backBtn"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:layout_weight="0">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_arrow_back"/>
+
+            <com.example.whats_app.Views.CircleImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/imageView"
+                android:background="@drawable/default_img"
+                android:layout_marginStart="5dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nameTextView"
+            android:layout_marginHorizontal="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="10dp"
+            android:orientation="horizontal"
+            android:layout_weight="0">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/videoBtn"
+                android:src="@drawable/ic_video"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/phoneBtn"
+                android:src="@drawable/ic_phone"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/moreBtn"
+                android:src="@drawable/ic_more"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chatHead"
+        android:layout_above="@+id/chatFooter">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatBody"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatFooter"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:padding="3dp">
+
+        <com.example.whats_app.Views.CustomView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark"
+            app:borderRadius="22dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_emoji"
+                android:layout_weight="0"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:maxHeight="100dp"
+                android:minHeight="25dp"
+                android:layout_weight="1"
+                android:inputType="text|textMultiLine"
+                android:hint="Message"
+                android:textColorHint="@color/ash"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@color/transparent"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_attach"
+                android:layout_weight="0"
+                android:rotation="-45"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_camera_gray"
+                android:layout_weight="0"
+                android:layout_marginStart="15dp"/>
+
+        </com.example.whats_app.Views.CustomView>
+
+        <com.example.whats_app.Views.CircleView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@color/green"
+            android:layout_marginStart="5dp"
+            android:id="@+id/sendBtn"
+            android:layout_weight="0"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/sendIcon"
+                android:src="@drawable/ic_mic"/>
+
+        </com.example.whats_app.Views.CircleView>
+
+    </LinearLayout>
+
+</RelativeLayout>

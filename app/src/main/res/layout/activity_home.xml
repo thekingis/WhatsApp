@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:background="@color/dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/header">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/whatsapp"
+            android:textColor="@color/light"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/cameraBtn"
+            android:src="@drawable/ic_camera"
+            android:layout_weight="0"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/searchBtn"
+            android:src="@drawable/ic_search"
+            android:layout_weight="0"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/todo" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/moreBtn"
+            android:src="@drawable/ic_more"
+            android:layout_weight="0"
+            android:contentDescription="@string/todo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:layout_below="@+id/header">
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabLayout"
+            app:tabGravity="fill"
+            app:tabInlineLabel="true"
+            android:background="@color/dark"
+            app:tabSelectedTextColor="@color/green"
+            app:tabIndicatorColor="@color/green"
+            app:tabTextColor="@color/light"
+            app:tabPaddingStart="10dp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"/>
+
+    </LinearLayout>
+
+    <com.example.whats_app.Views.CircleView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/editBtn"
+        android:visibility="gone"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="27dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_pencil"
+            android:contentDescription="@string/todo" />
+
+    </com.example.whats_app.Views.CircleView>
+
+    <com.example.whats_app.Views.CircleView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/messageBtn"
+        android:background="@color/green"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_message"
+            android:contentDescription="@string/todo" />
+
+    </com.example.whats_app.Views.CircleView>
+
+    <com.example.whats_app.Views.CircleView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/camBtn"
+        android:background="@color/green"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_camera_white"
+            android:contentDescription="@string/todo" />
+
+    </com.example.whats_app.Views.CircleView>
+
+    <com.example.whats_app.Views.CircleView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/callBtn"
+        android:background="@color/green"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_call_add"
+            android:contentDescription="@string/todo" />
+
+    </com.example.whats_app.Views.CircleView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contactsView"
+        android:background="@color/dark"
+        android:visibility="gone"
+        android:orientation="vertical" />
+
+</RelativeLayout>
